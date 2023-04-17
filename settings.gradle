@@ -1,1 +1,9 @@
 rootProject.name = 'kafka-sample'
+
+include("point:adapter")
+include("point:application")
+include("point:domain")
+
+include("post:adapter")
+include("post:application")
+include("post:domain")
