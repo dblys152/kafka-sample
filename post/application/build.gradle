@@ -1,9 +1,0 @@
-plugins {
-    id 'java-library'
-}
-
-dependencies {
-    implementation project(':post:domain')
-
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-}

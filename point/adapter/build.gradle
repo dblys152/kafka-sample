@@ -1,19 +1,11 @@
-plugins {
-    id 'java-library'
-}
-
 dependencies {
-    implementation project(':point:domain')
     implementation project(':point:application')
+    implementation project(':point:domain')
 
-    implementation 'org.springframework.boot:spring-boot-starter-web:3.0.4'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.7.5'
-    runtimeOnly 'com.h2database:h2:2.1.214'
-    runtimeOnly 'org.postgresql:postgresql:42.5.1'
-    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor:3.0.5'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test:3.0.5'
-}
+    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    runtimeOnly 'com.h2database:h2'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
-repositories {
-    mavenCentral()
+    testImplementation 'io.zonky.test:embedded-postgres:2.0.2'
 }
