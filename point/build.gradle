@@ -6,12 +6,12 @@ plugins {
 }
 
 def javaProjects = [
-        project("adapter"),
-        project("application"),
-        project("domain")
+        project("point-adapter"),
+        project("point-application"),
+        project("point-domain")
 ]
 def springBootProjects = [
-        project("adapter")
+        project("point-adapter")
 ]
 
 configure(javaProjects) {

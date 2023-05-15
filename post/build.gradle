@@ -6,12 +6,12 @@ plugins {
 }
 
 def javaProjects = [
-        project("adapter"),
-        project("application"),
-        project("domain")
+        project(":post:post-adapter"),
+        project(":post:post-application"),
+        project(":post:post-domain")
 ]
 def springBootProjects = [
-        project("adapter")
+        project(":post:post-adapter")
 ]
 
 configure(javaProjects) {

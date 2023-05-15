@@ -1,0 +1,9 @@
+dependencies {
+    implementation project(':post:post-domain')
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.hibernate:hibernate-validator:6.2.0.Final'
+    implementation ('io.awspring.cloud:spring-cloud-starter-aws-messaging:2.4.1') {
+        exclude group: 'com.amazonaws', module: 'aws-java-sdk-s3'
+    }
+}
