@@ -1,5 +1,6 @@
 package com.ys.post.domain;
 
+import com.ys.refs.user.domain.UserId;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

@@ -1,3 +1,4 @@
-test {
-    useJUnitPlatform()
+dependencies {
+    implementation project(':post:post-domain')
+    implementation project(':refs:user')
 }

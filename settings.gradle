@@ -7,3 +7,5 @@ include("point:point-domain")
 include("post:post-adapter")
 include("post:post-application")
 include("post:post-domain")
+
+include("refs:user")
