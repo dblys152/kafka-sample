@@ -1,3 +1,4 @@
 dependencies {
     implementation project(':refs:user')
+    implementation project(':refs:category')
 }

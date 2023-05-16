@@ -1,5 +1,6 @@
 package com.ys.post.domain;
 
+import com.ys.refs.category.domain.CategoryId;
 import com.ys.refs.user.domain.UserId;
 import org.junit.jupiter.api.Test;
 

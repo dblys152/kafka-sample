@@ -1,6 +1,7 @@
 dependencies {
     implementation project(':post:post-domain')
     implementation project(':refs:user')
+    implementation project(':refs:category')
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation ('io.awspring.cloud:spring-cloud-starter-aws-messaging:2.4.1') {

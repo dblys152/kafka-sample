@@ -9,3 +9,4 @@ include("post:post-application")
 include("post:post-domain")
 
 include("refs:user")
+include("refs:category")

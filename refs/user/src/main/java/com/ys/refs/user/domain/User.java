@@ -5,5 +5,5 @@ import lombok.Value;
 @Value(staticConstructor = "of")
 public class User {
 
-    UserId userId;
+    UserId id;
 }
