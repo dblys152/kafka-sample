@@ -1,24 +1,25 @@
 package com.ys.post.application.port.in;
 
 import com.ys.post.application.common.SelfValidating;
-import com.ys.post.domain.CategoryId;
 import com.ys.post.domain.Contents;
 import com.ys.post.domain.Title;
+import com.ys.refs.category.domain.CategoryId;
+import com.ys.refs.user.domain.UserId;
 import lombok.Value;
 
-import javax.validation.constraints.NotBlank;
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 @Value(staticConstructor = "of")
 public class RegisterPostCommand extends SelfValidating<RegisterPostCommand> {
 
-    @NotBlank
+    @Valid @NotNull
     CategoryId categoryId;
-    @NotBlank
+    @Valid @NotNull
     UserId userId;
-    @NotNull
+    @Valid @NotNull
     Title title;
-    @NotNull
+    @Valid @NotNull
     Contents contents;
 
     private RegisterPostCommand(CategoryId categoryId, UserId userId, Title title, Contents contents) {

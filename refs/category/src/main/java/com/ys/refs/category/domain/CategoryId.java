@@ -2,11 +2,11 @@ package com.ys.refs.category.domain;
 
 import lombok.Value;
 
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Value(staticConstructor = "of")
 public class CategoryId {
 
-    @NotBlank
+    @NotNull
     String id;
 }
