@@ -4,7 +4,10 @@ import com.ys.refs.category.domain.CategoryId;
 import com.ys.refs.user.domain.UserId;
 import org.junit.jupiter.api.Test;
 
+import javax.validation.ConstraintViolationException;
+
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PostTest {
@@ -20,6 +23,16 @@ class PostTest {
         assertAll(
                 () -> assertThat(actual).isNotNull(),
                 () -> assertThat(actual.getId()).isNotNull()
+        );
+    }
+
+    @Test
+    void 게시글_생성_실패() {
+        assertAll(
+                () -> assertThatThrownBy(() -> Post.create(null, ANY_USER_ID, ANY_TITLE, ANY_CONTENTS)).isInstanceOf(ConstraintViolationException.class),
+                () -> assertThatThrownBy(() -> Post.create(ANY_CATEGORY_ID, null, ANY_TITLE, ANY_CONTENTS)).isInstanceOf(ConstraintViolationException.class),
+                () -> assertThatThrownBy(() -> Post.create(ANY_CATEGORY_ID, ANY_USER_ID, null, ANY_CONTENTS)).isInstanceOf(ConstraintViolationException.class),
+                () -> assertThatThrownBy(() -> Post.create(ANY_CATEGORY_ID, ANY_USER_ID, ANY_TITLE, null)).isInstanceOf(ConstraintViolationException.class)
         );
     }
 }
