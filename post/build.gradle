@@ -11,7 +11,8 @@ def javaProjects = [
         project(":post:post-domain")
 ]
 def springBootProjects = [
-        project(":post:post-adapter")
+        project(":post:post-adapter"),
+        project(":post:post-application")
 ]
 
 configure(javaProjects) {
@@ -46,8 +47,11 @@ configure(springBootProjects) {
     apply plugin: "io.spring.dependency-management"
 
     dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation 'org.hibernate:hibernate-validator:6.2.0.Final'
+
         testImplementation "org.springframework.boot:spring-boot-starter-test"
-        testImplementation "io.zonky.test:embedded-database-spring-test:2.1.1"
     }
 }
 

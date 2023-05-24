@@ -1,6 +1,6 @@
 dependencies {
-    implementation project(':post:post-application')
-    implementation project(':post:post-domain')
+    implementation project(':point:point-application')
+    implementation project(':point:point-domain')
     implementation project(':refs:user')
     implementation project(':refs:category')
 
