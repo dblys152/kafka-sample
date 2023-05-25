@@ -1,6 +1,6 @@
 package com.ys.post.application.port.in;
 
-import com.ys.post.application.common.SelfValidating;
+import com.ys.post.common.SelfValidating;
 import com.ys.post.domain.Contents;
 import com.ys.post.domain.Title;
 import com.ys.refs.category.domain.CategoryId;

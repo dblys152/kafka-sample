@@ -1,4 +1,4 @@
-package com.ys.post.application.common;
+package com.ys.point.common;
 
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.stereotype.Component;

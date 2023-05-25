@@ -1,4 +1,4 @@
-package com.ys.post.application.common;
+package com.ys.post.common;
 
 import javax.validation.*;
 import java.util.Set;
